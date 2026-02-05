@@ -98,7 +98,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0"> MBA Student - Learning Web & Technology</p>
+                <p class="masthead-subheading font-weight-light mb-0"><span id="typing-text"></span></p>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -508,6 +508,43 @@
     }, 3000); // 3000 ms = 3 seconds
   });
 </script>
+        <script>
+  const roles = [
+    "MBA Student",
+    "Learning Web & Technology",
+    "B.com Graduate",
+    "AI Enthusiast",
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  const typingElement = document.getElementById("typing-text");
+
+  function typeEffect() {
+    if (charIndex < roles[roleIndex].length) {
+      typingElement.textContent += roles[roleIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 90);
+    } else {
+      setTimeout(eraseEffect, 1400);
+    }
+  }
+
+  function eraseEffect() {
+    if (charIndex > 0) {
+      typingElement.textContent =
+        roles[roleIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseEffect, 50);
+    } else {
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, 300);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
 
     </body>
 </html>
