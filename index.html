@@ -16,6 +16,21 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
        <style>
+           .custom-divider {
+    width: 120px;
+    height: 4px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00ffcc, #00aaff, #00ffcc);
+    background-size: 200% auto;
+    animation: dividerMove 3s linear infinite;
+}
+
+@keyframes dividerMove {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
   #loader {
     position: fixed;
     inset: 0;
@@ -156,11 +171,6 @@
       Kaustubh Kishore Gogoi
     </h1>
     <!-- Divider -->
-    <div class="divider-custom divider-light">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon">
-        <i class="fas fa-star"></i>
-      </div>
       <div class="divider-custom-line"></div>
     </div>
     <!-- Typing Animation -->
