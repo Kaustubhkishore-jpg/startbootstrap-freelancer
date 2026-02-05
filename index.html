@@ -28,6 +28,21 @@
     color: white;
     font-family: Arial, sans-serif;
   }
+ #typing-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: linear-gradient(270deg, #ff7a18, #00c6ff, #1abc9c);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .masthead-subheading {
   height: 40px;
   display: flex;
@@ -513,43 +528,40 @@
     }, 3000); // 3000 ms = 3 seconds
   });
 </script>
-        <script>
-  const roles = [
-    "MBA Student",
-    "Learning Web & Technology",
-    "B.com Graduate",
-    "AI Enthusiast",
-  ];
+     <script>
+const roles = [
+ "MBA Student",
+ "Finance & Marketing",
+  "Learning Web & Technology",
+ "Undergraduate",
+ "AI Enthusiast",
+];
 
-  let roleIndex = 0;
-  let charIndex = 0;
-  const typingElement = document.getElementById("typing-text");
+let roleIndex = 0;
+let charIndex = 0;
+const typingElement = document.getElementById("typing-text");
 
-  function typeEffect() {
-    if (charIndex < roles[roleIndex].length) {
-      typingElement.textContent += roles[roleIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeEffect, 90);
-    } else {
-      setTimeout(eraseEffect, 1400);
-    }
+function typeEffect() {
+  if (charIndex < roles[roleIndex].length) {
+    typingElement.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 80);
+  } else {
+    setTimeout(fadeOut, 1600);
   }
+}
+function fadeOut() {
+  typingElement.style.opacity = 0;
 
-  function eraseEffect() {
-    if (charIndex > 0) {
-      typingElement.textContent =
-        roles[roleIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(eraseEffect, 50);
-    } else {
-      roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeEffect, 300);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", typeEffect);
+  setTimeout(() => {
+    typingElement.textContent = "";
+    charIndex = 0;
+    roleIndex = (roleIndex + 1) % roles.length;
+    typingElement.style.opacity = 1;
+    typeEffect();
+  }, 500);
+}
+document.addEventListener("DOMContentLoaded", typeEffect);
 </script>
-
-
     </body>
 </html>
