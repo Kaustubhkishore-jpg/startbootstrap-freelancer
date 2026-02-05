@@ -675,7 +675,8 @@ typeEffect();
 
 <div id="walking-dog">
     <img src="dist/assets/dog.gif.gif" alt="Walking Dog">
-    <div class="dog-message">Welcome
+    <div class="dog-message">Welcome to my portfolio! 🐾</div>
+</div>
         <script>
 function funnyAnimation() {
     let dog = document.getElementById("walking-dog");
@@ -686,13 +687,12 @@ function funnyAnimation() {
         dog.style.left = "110%";}, 50);
    let msg = dog.querySelector(".dog-message");
   msg.style.opacity = "1";
+      // Hide message only when dog finishes walking
  setTimeout(() => {
         msg.style.opacity = "0";
-    }, 4000);
+    }, 6000);
 }
 </script>
-to my portfolio! 🐾</div>
-</div>
 
     </body>
 </html>
