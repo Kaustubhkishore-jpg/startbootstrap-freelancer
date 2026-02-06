@@ -752,28 +752,7 @@ function typeEffect() {
   setTimeout(typeEffect, speed);
 }
 typeEffect();
-</script>
-<div id="walking-dog">
-    <img src="dist/assets/dog.gif.gif" alt="Walking Dog">
-    <div class="dog-message">Welcome to my portfolio! 🐾</div>
-</div>
-        <script>
-function funnyAnimation() {
-    let dog = document.getElementById("walking-dog");
-    dog.style.left = "-200px";
-    dog.style.transition = "none";
-    setTimeout(() => {
-        dog.style.transition = "left 6s linear";
-        dog.style.left = "110%";}, 50);
-   let msg = dog.querySelector(".dog-message");
-  msg.style.opacity = "1";
-      // Hide message only when dog finishes walking
- setTimeout(() => {
-        msg.style.opacity = "0";
-    }, 6000);
-}
-</script>
-                    
+</script>                    
 <script>
 function toggleTheme() {
   const body = document.body;
@@ -818,7 +797,6 @@ function funnyAnimation() {
     dog.style.transition = "left 6s linear";
     dog.style.left = "110%";
   }, 50);
-
   setTimeout(() => {
     msg.style.opacity = "0";
   }, 6000);
@@ -831,8 +809,10 @@ document.getElementById("yooHallooBtn").addEventListener("click", function (e) {
 </script>
 <!-- DOG ANIMATION (GLOBAL OVERLAY) -->
 <div id="walking-dog">
-  <img src="dog.gif" alt="Walking Dog">
+  <img src="dist/assets/dog.gif.gif" alt="Walking Dog">
   <div class="dog-message">Welcome to my portfolio! 🐾</div>
+</div>
+
 </div>
 </body>
 </html>
