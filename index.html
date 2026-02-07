@@ -16,6 +16,12 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
        <style>
+           html,
+body {
+  background-color: #1e262c !important; /* same as hero */
+  margin: 0;
+  padding: 0;
+}
 /* ===============================
    PILL SHAPED NAVBAR
 ================================ */
@@ -96,15 +102,9 @@ body {
   color: #000000;
 }
 /* ================== DARK MODE ================== */
-body.dark-mode {
-  background-color: #000000;
-  color: #ffffff;
-}
-
 body.dark-mode .page-section {
   background-color: #000000;
 }
-
 body.dark-mode .page-section-heading {
   color: #ffffff;
 }
@@ -112,7 +112,6 @@ body.dark-mode .page-section-heading {
 #typing-text {
   color: #1abc9c !important;
 }
-
 /* Portfolio cards FIX */
 body.dark-mode .portfolio-item {
   background-color: #ffffff;
