@@ -11044,3 +11044,7 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+/* Move hero content (photo + name + divider + typing) upward */
+header.masthead .container {
+  margin-top: -80px;
+}
