@@ -19,9 +19,6 @@
 /* ===============================
    PILL SHAPED NAVBAR
 ================================ */
-html, body {
-  background-color: #1e2933; /* same as your page background */
-}
   body {
   padding-top: 120px;
 }
@@ -111,12 +108,10 @@ body.dark-mode .page-section {
 body.dark-mode .page-section-heading {
   color: #ffffff;
 }
-
-/* keep hero section unchanged */
-body.dark-mode header.masthead {
+ body.dark-mode header.masthead {
   background-color: #1e262c;
+  padding-top: 160px; /* space for pill navbar */
 }
-
 /* typing animation text (always visible) */
 #typing-text {
   color: #1abc9c !important;
@@ -319,7 +314,8 @@ body.dark-mode #typing-text {
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="Kaustubh Kihsore Gogoi Resume (new) (1).pdf" download target="_blank"> Download CV ⬇ </a></li>
+                        <li class=
+                            "nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="Kaustubh Kihsore Gogoi Resume (new) (1).pdf" download target="_blank"> Download CV ⬇ </a></li>
                         <li class="nav-item mx-0 mx-lg-1"> <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()"> 🌙 </button></li>
                     </ul>
                 </div>
